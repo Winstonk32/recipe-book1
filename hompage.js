@@ -1,3 +1,5 @@
+
+
 const recipes = [
   {
     title: "chicken curry",
@@ -80,9 +82,11 @@ function renderRecipes(recipeList) {
     `;
 
     recipeListContainer.appendChild(recipeCard);
+
+   
+  
   });
 }
-
 
 renderRecipes(recipes);
 
@@ -97,3 +101,12 @@ searchBar.addEventListener("input", function(e) {
 
   renderRecipes(filteredRecipes); 
 });
+
+if (typeof module !== 'undefined') {
+  module.exports = {
+      viewRecipe,
+      saveRecipe,
+      deleteRecipe,
+      displayPopularRecipes
+  };
+}
